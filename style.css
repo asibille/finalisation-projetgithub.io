@@ -1,0 +1,214 @@
+
+
+
+body{
+	font-family: verdana, Calibri, sans-serif;
+	text-align: center;
+	margin:center;
+	padding:60px;
+
+}
+
+
+/* On utilise ">"pour ne ciibler que la liste ul qui *est un enfant direct de nav*/
+nav > ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* On enlève les puces devant tous les éléments li *appartenant à notre élément nav*/
+
+nav li{
+	list-style-type: none;
+
+}
+/* on affiche seulement les éléments li correspondant à *nos onglets de menu ligne (côte à côte)*/
+
+nav > ul > li{
+	float: right;
+}
+
+.submenu{
+	display: none;
+
+}
+
+/* On rend notre case à cocher invisible*/
+nav input[type=checkbox]{
+display: none;
+}
+/* On cache le bouton affichant le menu mobile*/
+.menu-mobile{
+	display: none;
+}
+nav{
+	width: 60%;
+	background-color: #a9a9a9;
+
+}
+/* On affiche seulement les éléments li correspondant à *nos onglets de menu ligne(côte à côte)*/
+nav > ul > li{
+	float: left;
+	position: relative;
+}
+
+/* Un "hack" CSS (clearfix)*/
+
+nav > ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+}
+nav > ul > li > a{
+	padding: 20px 30px;
+	color:  #FFF;
+}
+nav li:hover .submenu{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	padding: 30px;
+	z-index: 100000;
+}
+.submenu li {
+	border-bottom: 1px solid #CCC;
+}
+.submenu li a{
+	padding: 60px 60px;
+	font-size: 13px;
+	color: #222538;
+	width: 270px;
+}
+.HTML
+{
+
+margin: 50px;
+
+
+}
+.menu-html:hover{
+	margin: auto;
+	padding: right;
+	border-top: 2px solid #33BEFF;
+	background-color: RGBa(18, 217, 165, 0.3);
+}
+
+
+.menu-css:hover{
+	margin: auto;
+	padding: right;
+	border-top: 2px solid #7E0BE3;
+	background-color: RGBa(0000,112,192,0.15);
+}
+
+.CSS
+{
+margin: 50px;
+}
+
+.menu-js:hover{
+	margin: auto;
+	padding: right;
+	border-top: 2px solid #9833FF;
+	background-color: RGBa(0, 147, 0, 0.4);
+}
+.JS
+{
+ margin: 50px;
+}
+
+
+.tpjs:hover{
+	margin: auto;
+	padding: right;
+	border-top: 2px solid #00CED1;
+	background-color: RGBa(0, 0,255, 0.6);
+}
+
+nav > ul > li:hover a{
+	padding: 15px 30px 20px 30px;
+}
+
+.menu-html .submenu{
+	background-color: RGB(106, 90, 205);
+}
+.menu-css .submenu{
+	background-color: RGB(000, 160, 240);
+
+}
+.menu-js .submenu{
+	background-color: RGB(251,216,99);
+}
+.tpjs .submenu{
+	background-color: RGB(255,140,0);
+}
+.submenu li:hover a{
+	color: #EEE;
+	font-weight: bold;
+}
+.menu-html .submenu li:hover {
+	background-color: RGB(106, 90, 205);
+}
+
+.menu-css .submenu li:hover{
+	background-color: RGB(000,115,200);
+}
+
+.menu-js .submenu li:hover{ 
+	background-color: RGB(200,165,75);
+}
+
+.menu-mobile{
+	display: none;
+}
+
+/* On rend notre case à cocher invisible*/
+
+nav input[type=checkbox]{
+	display: none;
+}
+
+nav input[type=checkbox]:checked ~ ul {
+	display: block;
+}
+
+@media screen and (max-width: 3080px){
+	.menu-mobile{
+		display: block;
+		color: #fff;
+		background-color: rgba(29,197,151,0.97);
+		text-align: center;
+		padding: 30px 0;
+			}
+			nav ul{
+				display: none;
+			}
+}
+
+@media screen and(max-width: 680px){
+	.menu-mobile{
+		display: block;
+		color: fff;
+		background-color: rgba(29, 197, 151, 0.97);
+		text-align: center;
+		padding: 20px 0;
+	}
+	nav ul {
+		display: none;
+	}
+}
+nav ul li, nav ul li:hover a{
+	padding: 10px 0px 10px 0px;
+}
+nav li:hover.submenu{
+	display: block;
+	position: static;
+}
+}
+
